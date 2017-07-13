@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 	
+ 	<!-- angular material style sheet -->
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+	 
+	<!-- roboto font -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+	 
+	<!-- include custom CSS -->
+	<link rel="stylesheet" href="app/assets/css/custom.css" />
+
+	<!-- include angular js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	 
+	<!-- needed for angular material -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+	
+	<!--script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script-->    
+    <!--script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script-->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- angular material Library -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+	<!-- app -->
+	<script type="text/javascript" src="app/app.js"></script>
+
+	<!-- products controller -->
+	<script type="text/javascript" src="app/products/products.controller.js"></script>
+
+	<!-- categorys controller -->
+	<script type="text/javascript" src="app/categorys/categorys.controller.js"></script>
+	 
+	<!-- products factory -->
+	<script type="text/javascript" src="app/products/products.factory.js"></script>
+
+	<!-- categorys factory -->
+	<script type="text/javascript" src="app/categorys/categorys.factory.js"></script>
+
+    <title>Read Products</title>
+ 
+</head>
+<body>
+ 
+<!-- app container will be here -->
+<!-- container of our app -->
+<div layout="row" class="tabs-container" ng-app="myApp">
+ 	<div flex="10"></div>
+
+ 	<div flex="80" ng-cloak>
+	  <md-content>
+	    <md-tabs md-dynamic-height md-border-bottom>
+	      <md-tab label="Products">
+	        <md-content class="md-padding">	          
+	          <!-- read products template -->
+    		  <ng-include src="'./app/products/read_products.template.html'"></ng-include>
+	        </md-content>
+	      </md-tab>
+	      <md-tab label="Categorys">
+	        <md-content class="md-padding">
+	          <!-- read products template -->
+    		  <ng-include src="'./app/categorys/read_categorys.template.html'"></ng-include>
+	        </md-content>
+	      </md-tab>	     
+	    </md-tabs>
+	  </md-content>
+	</div>
+
+	<div flex="10"></div>
+</div> <!-- end container -->
+ 
+</body>
+</html>
